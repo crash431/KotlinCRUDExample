@@ -22,6 +22,6 @@ class TaskControllerTests {
         Mockito.`when`(taskService.createTask(task)).thenReturn(any())
         taskController.createTask(task)
 
-        verify(taskService).createTask(any())
+        verify(taskService).createTask(task)
     }
 }
