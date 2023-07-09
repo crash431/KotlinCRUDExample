@@ -23,6 +23,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
