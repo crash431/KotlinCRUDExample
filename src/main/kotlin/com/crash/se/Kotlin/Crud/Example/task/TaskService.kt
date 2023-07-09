@@ -10,7 +10,6 @@ class TaskService {
     private lateinit var taskRepository: TaskRepository
 
     fun createTask(task: Task): Task {
-        taskRepository.save(task)
-        return task
+        return taskRepository.save(task)
     }
 }
