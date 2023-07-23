@@ -22,4 +22,9 @@ class TaskController {
     fun createTask(@RequestBody task: Task): Task {
         return taskService.createTask(task)
     }
+
+    @GetMapping
+    fun getTasks(): List<Task> {
+        return taskService.getTasks()
+    }
 }

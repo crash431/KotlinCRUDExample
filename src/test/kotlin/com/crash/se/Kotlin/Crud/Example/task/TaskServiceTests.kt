@@ -24,4 +24,17 @@ class TaskServiceTests {
         verify(taskRepository).save(task)
         assertEquals(task, actual)
     }
+
+    @Test
+    fun `can get all tasks`() {
+        val tasks = listOf<Task>(
+            Task("1", "Test", "", "Low"),
+            Task("2", "Test2", "", "High")
+        )
+
+        Mockito.`when`(taskRepository.findAll()).thenReturn(tasks)
+        val actual = taskService.getTasks()
+        verify(taskRepository).findAll()
+        assertEquals(tasks, actual)
+    }
 }

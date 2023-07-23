@@ -24,4 +24,11 @@ class TaskControllerTests {
 
         verify(taskService).createTask(task)
     }
+
+    @Test
+    fun `test getTasks should call service`() {
+        taskController.getTasks()
+
+        verify(taskService).getTasks()
+    }
 }

@@ -12,4 +12,8 @@ class TaskService {
     fun createTask(task: Task): Task {
         return taskRepository.save(task)
     }
+
+    fun getTasks(): List<Task> {
+        return taskRepository.findAll()
+    }
 }
